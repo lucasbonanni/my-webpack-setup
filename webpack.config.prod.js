@@ -32,6 +32,9 @@ module.exports = {
                     'css-loader',
                     // Compiles Sass to CSS
                     'sass-loader',
+                ],
+                exclude: [
+                    path.resolve(__dirname, "node_modules")
                 ]
             },
             {
@@ -39,15 +42,22 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     outputPath: 'img',
-                }
+                },
+                exclude: [
+                    path.resolve(__dirname, "node_modules")
+                ],
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 loader: 'file-loader',
                 options: {
                     outputPath: 'fonts',
-                }
+                },
+                exclude: [
+                    path.resolve(__dirname, "node_modules")
+                ],
             },
+
         ]
     }
 };
